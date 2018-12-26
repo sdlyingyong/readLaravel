@@ -37,6 +37,7 @@ class Route {
 	 * @param  array     $parameters
 	 * @return mixed
 	 */
+	//返回一个响应实例
 	public function call()
 	{
 		$response = null;
@@ -44,10 +45,12 @@ class Route {
 		// --------------------------------------------------------------
 		// If the route just has a callback, call it.
 		// --------------------------------------------------------------
+        //检查能否嗲用route
 		if (is_callable($this->route))
 		{
-			$response = call_user_func_array($this->route, $this->parameters);
-		}
+            //调用route保存的函数和参数,作为响应
+            $response = call_user_func_array($this->route, $this->parameters);
+        }
 		// --------------------------------------------------------------
 		// The route value is an array. We'll need to evaluate it.
 		// --------------------------------------------------------------

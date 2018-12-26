@@ -11,6 +11,7 @@ class Filter {
 
 	/**
 	 * Call a set of route filters.
+     * 路由过滤器 用来加载控制器前过来 和响应后过滤
 	 *
 	 * @param  string  $filter
 	 * @param  array   $parameters

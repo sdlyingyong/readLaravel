@@ -29,6 +29,7 @@ class Error {
 	 * @param  Exception  $e
 	 * @return void
 	 */
+	//静态方法 用来接管错误输出
 	public static function handle($e)
 	{
 		// -----------------------------------------------------
